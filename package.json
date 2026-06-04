@@ -1,0 +1,46 @@
+{
+  "name": "omni-discord-bot",
+  "version": "0.1.0",
+  "description": "Ultimate Discord Bot - Phase 2 Core MVP",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/bot.ts",
+    "build": "tsc",
+    "start": "node dist/bot.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "commands:register": "tsx src/scripts/register-commands.ts"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "moderation",
+    "security",
+    "leveling"
+  ],
+  "author": "Codex",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "zod": "^3.22.4",
+    "@prisma/client": "^5.7.1",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5",
+    "tsx": "^4.7.0",
+    "vitest": "^1.1.0",
+    "prisma": "^5.7.1"
+  }
+}
